@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>熊奕辉 · 个人博客 | 华北理工大学 采矿工程</title>
+  <meta name="description" content="熊奕辉的个人博客 —— 华北理工大学采矿工程本科生，专业第一，国家级+省级竞赛获奖者。记录学习、竞赛与成长。" />
+  <meta name="author" content="熊奕辉" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%2334d399'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23060a13'/%3E%3Cpath d='M18 46 L32 16 L46 46' stroke='url(%23g)' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='32' cy='20' r='4' fill='%23fbbf24'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div id="scroll-progress"></div>
+
+  <!-- ===== 导航 ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">熊</span>
+        <span class="brand-text">YIHUI<span class="brand-dot">.</span>BLOG</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#home" class="nav-link active">首页</a></li>
+        <li><a href="#about" class="nav-link">关于</a></li>
+        <li><a href="#resume" class="nav-link">简历</a></li>
+        <li><a href="#skills" class="nav-link">技能</a></li>
+        <li><a href="#honors" class="nav-link">荣誉</a></li>
+        <li><a href="#experience" class="nav-link">经历</a></li>
+        <li><a href="#blog" class="nav-link">博客</a></li>
+        <li><a href="#contact" class="nav-link">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== 首屏 ===== -->
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <p class="hero-hello reveal">👋 你好，我是</p>
+      <h1 class="hero-name reveal">熊奕辉</h1>
+      <p class="hero-role reveal">
+        我是 <span id="typed"></span><span class="caret">|</span>
+      </p>
+      <p class="hero-desc reveal">
+        华北理工大学 · 采矿工程（双碳方向）本科生<br />
+        加权分、综测、GPA 专业第一，用代码与热爱记录成长。
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#blog" class="btn btn-primary">进入博客</a>
+        <a href="#contact" class="btn btn-ghost">联系我</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num" data-count="6">0</span>
+          <span class="stat-label">竞赛获奖<br /><small>1 国家级 + 5 省级</small></span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="4">0</span>
+          <span class="stat-label">一等奖学金</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="2">0</span>
+          <span class="stat-label">大创项目<br /><small>主持校级 · 参与国家级</small></span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">NO.1</span>
+          <span class="stat-label">专业排名<br /><small>加权 · 综测 · GPA</small></span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="向下滚动">
+      <span class="mouse"><span class="wheel"></span></span>
+    </a>
+  </header>
+
+  <main>
+    <!-- ===== 01 关于我 ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">01</span>
+          <h2 class="section-title">关于我</h2>
+          <span class="section-line"></span>
+        </div>
+        <div class="about-grid">
+          <div class="about-photo reveal">
+            <div class="photo-frame">
+              <img src="assets/id-photo.jpg" alt="熊奕辉的证件照" />
+              <div class="photo-badge">熊奕辉</div>
+            </div>
+          </div>
+          <div class="about-text">
+            <p class="about-lead reveal">
+              我是熊奕辉，华北理工大学 <strong>采矿工程（双碳方向）</strong>2024 级本科生，
+              2024 年 9 月入学，预计 2028 年 6 月毕业。
+            </p>
+            <p class="reveal">
+              自入学以来，我的加权平均分、综测成绩与 GPA 均位列<strong>专业第一</strong>，
+              累计获得 4 次一等奖学金。我始终相信：<em>把每一件小事做到极致，结果自然不差。</em>
+            </p>
+            <p class="reveal">
+              课堂上我钻研岩石力学与采矿学，课堂外我活跃在竞赛场与学生工作中 ——
+              获得国家级奖项 1 项、省级奖项 5 项，担任院学生会副主席，
+              擅长数据分析、跨部门协作，也享受把想法变成作品的每个瞬间。
+            </p>
+            <div class="about-tags reveal">
+              <span class="tag">数据分析</span>
+              <span class="tag">跨部门协作</span>
+              <span class="tag">学习能力强</span>
+              <span class="tag">积极向上</span>
+            </div>
+            <ul class="about-meta reveal">
+              <li><span class="meta-icon">📍</span>河北 · 唐山 · 曹妃甸区</li>
+              <li><span class="meta-icon">🎓</span>华北理工大学 · 采矿工程</li>
+              <li><span class="meta-icon">📅</span>2024.09 – 2028.06</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 02 简历 ===== -->
+    <section id="resume" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">02</span>
+          <h2 class="section-title">我的简历</h2>
+          <span class="section-line"></span>
+        </div>
+        <p class="section-sub reveal">创意设计风格 · 一页看懂我的经历</p>
+        <div class="resume-grid">
+          <div class="resume-card reveal">
+            <div class="resume-frame">
+              <img src="assets/resume.jpg" alt="熊奕辉的简历" loading="lazy" />
+            </div>
+            <div class="resume-actions">
+              <a class="btn btn-primary" href="assets/resume.jpg" download="熊奕辉-简历.jpg">下载简历</a>
+              <a class="btn btn-ghost" href="assets/resume.jpg" target="_blank" rel="noopener">全屏查看</a>
+            </div>
+          </div>
+          <div class="resume-highlights">
+            <div class="hl-item reveal">
+              <span class="hl-num">01</span>
+              <div>
+                <h3>学业 · 专业第一</h3>
+                <p>加权平均分 / 综测 / GPA 均为专业第一，4 次一等奖学金，2 次校级三好学生。</p>
+              </div>
+            </div>
+            <div class="hl-item reveal">
+              <span class="hl-num">02</span>
+              <div>
+                <h3>竞赛 · 1 国 5 省</h3>
+                <p>全国大学生技术创新创业大赛三等奖；蓝桥杯、iCAN、仿真创新应用大赛等省级奖项 5 项。</p>
+              </div>
+            </div>
+            <div class="hl-item reveal">
+              <span class="hl-num">03</span>
+              <div>
+                <h3>科研 · 双大创</h3>
+                <p>主持 1 项校级大学生创新创业计划，参与 1 项国家级大学生创新创业计划。</p>
+              </div>
+            </div>
+            <div class="hl-item reveal">
+              <span class="hl-num">04</span>
+              <div>
+                <h3>工作 · 学生会副主席</h3>
+                <p>负责活动组织策划，带领院学生会完成多场趣味活动，获评校级优秀学生干部。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 03 技能与课程 ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">03</span>
+          <h2 class="section-title">技能 · 课程</h2>
+          <span class="section-line"></span>
+        </div>
+        <div class="skills-grid">
+          <div class="skills-bars">
+            <div class="skill reveal">
+              <div class="skill-top"><span>Office 办公软件（Word · PPT · Excel）</span><span>熟练</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+            </div>
+            <div class="skill reveal">
+              <div class="skill-top"><span>Python（数据分析）</span><span>熟练</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+            </div>
+            <div class="skill reveal">
+              <div class="skill-top"><span>剪映（视频剪辑）</span><span>熟练</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+            </div>
+            <div class="skill reveal">
+              <div class="skill-top"><span>MATLAB（数值计算）</span><span>掌握</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+            </div>
+            <div class="cert-row reveal">
+              <span class="cert">📜 计算机二级证书</span>
+              <span class="cert">🗣️ 普通话等级证书</span>
+            </div>
+          </div>
+          <div class="courses">
+            <h3 class="courses-title reveal">核心课程</h3>
+            <div class="course-chips reveal">
+              <span class="course-chip">岩石力学</span>
+              <span class="course-chip">采矿学</span>
+              <span class="course-chip">材料力学</span>
+              <span class="course-chip">理论力学</span>
+              <span class="course-chip">流体力学</span>
+              <span class="course-chip">弹性力学</span>
+              <span class="course-chip">矿山地质学</span>
+              <span class="course-chip">低碳经济学</span>
+            </div>
+            <div class="strength-note reveal">
+              <span class="strength-icon">⚡</span>
+              <p><strong>优势标签：</strong>数据分析 · 跨部门协作 · 学习能力强 · 积极向上</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 荣誉与竞赛 ===== -->
+    <section id="honors" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">04</span>
+          <h2 class="section-title">荣誉 · 竞赛</h2>
+          <span class="section-line"></span>
+        </div>
+
+        <h3 class="honor-group-title reveal">🏆 竞赛获奖 <small>（1 国家级 · 5 省级）</small></h3>
+        <div class="award-grid">
+          <article class="award-card award-national reveal">
+            <span class="award-tier">国家级</span>
+            <h4>全国大学生技术创新创业大赛</h4>
+            <p class="award-prize">全国三等奖</p>
+            <p class="award-note">智能制造赛道 · 团队项目</p>
+          </article>
+          <article class="award-card reveal">
+            <span class="award-tier">省级</span>
+            <h4>蓝桥杯全国软件和信息技术专业人才大赛</h4>
+            <p class="award-prize">省级二等奖</p>
+          </article>
+          <article class="award-card reveal">
+            <span class="award-tier">省级</span>
+            <h4>iCAN 大学生创新创业大赛</h4>
+            <p class="award-prize">省级二等奖</p>
+          </article>
+          <article class="award-card reveal">
+            <span class="award-tier">省级</span>
+            <h4>全国仿真创新应用大赛</h4>
+            <p class="award-prize">省级二等奖</p>
+          </article>
+          <article class="award-card reveal">
+            <span class="award-tier">省级</span>
+            <h4>河北省高校大数据应用创新大赛</h4>
+            <p class="award-prize">三等奖</p>
+          </article>
+          <article class="award-card reveal">
+            <span class="award-tier">省级</span>
+            <h4>“调研河北”大学生社会调查活动</h4>
+            <p class="award-prize">省级三等奖</p>
+          </article>
+        </div>
+
+        <h3 class="honor-group-title reveal">🎖️ 奖学金 · 荣誉称号</h3>
+        <div class="badge-grid">
+          <div class="badge-card reveal"><span class="badge-icon">🥇</span><h4>4 × 一等奖学金</h4><p>专业第一的实力证明</p></div>
+          <div class="badge-card reveal"><span class="badge-icon">🏅</span><h4>2 × 校级三好学生</h4><p>德智体美劳全面发展</p></div>
+          <div class="badge-card reveal"><span class="badge-icon">🧑‍💼</span><h4>校级优秀学生干部</h4><p>学生工作的责任担当</p></div>
+          <div class="badge-card reveal"><span class="badge-icon">🚩</span><h4>优秀团干部</h4><p>团学活动的组织力量</p></div>
+          <div class="badge-card reveal"><span class="badge-icon">🤝</span><h4>优秀志愿者</h4><p>志愿服务，传递温暖</p></div>
+          <div class="badge-card reveal"><span class="badge-icon">🌾</span><h4>社会实践优秀个人</h4><p>走进田野，调研河北</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 05 科研与实践 ===== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">05</span>
+          <h2 class="section-title">科研 · 实践</h2>
+          <span class="section-line"></span>
+        </div>
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <span class="tl-dot"></span>
+            <time class="tl-time">2024.09</time>
+            <div class="tl-card">
+              <h3>入学华北理工大学</h3>
+              <p>进入采矿工程（双碳方向）专业，开启大学生活，加入院学生会。</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <span class="tl-dot"></span>
+            <time class="tl-time">2024 – 至今</time>
+            <div class="tl-card">
+              <h3>院学生会 · 副主席</h3>
+              <p>从干事成长为副主席，主要负责活动的组织策划。在全体成员的努力下，学院诸多趣味活动顺利开展，个人组织协调能力得到充分锻炼。</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <span class="tl-dot"></span>
+            <time class="tl-time">2025</time>
+            <div class="tl-card">
+              <h3>主持校级大学生创新创业计划</h3>
+              <p>作为项目负责人，独立主持 1 项校级大创项目，负责选题、推进与结题。</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <span class="tl-dot"></span>
+            <time class="tl-time">2025 – 至今</time>
+            <div class="tl-card">
+              <h3>参与国家级大学生创新创业计划</h3>
+              <p>加入国家级大创团队，参与核心技术工作，向更高水平的科研平台学习。</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <span class="tl-dot tl-dot-future"></span>
+            <time class="tl-time">2028.06</time>
+            <div class="tl-card">
+              <h3>本科毕业 · 未来可期</h3>
+              <p>带着专业第一的底气与 1 国 5 省的竞赛历练，奔赴下一段旅程。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 06 博客 ===== -->
+    <section id="blog" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">06</span>
+          <h2 class="section-title">博客文章</h2>
+          <span class="section-line"></span>
+        </div>
+        <p class="section-sub reveal">记录学习、竞赛与成长的每一步</p>
+        <div class="post-grid">
+          <article class="post-card reveal">
+            <div class="post-cover" style="--hue:190">
+              <span class="post-emoji">👋</span>
+            </div>
+            <div class="post-body">
+              <time>2026-07-01</time>
+              <h3><a href="posts/hello-world.html">你好，世界 —— 我的第一篇博客</a></h3>
+              <p>为什么一个采矿工程的学生要开一个博客？从"经历"文件夹里的几百个文件说起……</p>
+              <a class="post-more" href="posts/hello-world.html">阅读全文 →</a>
+            </div>
+          </article>
+          <article class="post-card reveal">
+            <div class="post-cover" style="--hue:260">
+              <span class="post-emoji">📚</span>
+            </div>
+            <div class="post-body">
+              <time>2026-06-20</time>
+              <h3><a href="posts/first-place.html">把 GPA 刷到专业第一，我做对了什么？</a></h3>
+              <p>加权分、综测、GPA 三个第一不是玄学，而是四件小事坚持两年的结果。</p>
+              <a class="post-more" href="posts/first-place.html">阅读全文 →</a>
+            </div>
+          </article>
+          <article class="post-card reveal">
+            <div class="post-cover" style="--hue:330">
+              <span class="post-emoji">🏆</span>
+            </div>
+            <div class="post-body">
+              <time>2026-06-05</time>
+              <h3><a href="posts/competition.html">竞赛手记：1 个国家级 + 5 个省级奖项背后的故事</a></h3>
+              <p>从蓝桥杯到 iCAN，从仿真创新到调研河北，竞赛教给我的远不止名次。</p>
+              <a class="post-more" href="posts/competition.html">阅读全文 →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 07 联系 ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">07</span>
+          <h2 class="section-title">联系我</h2>
+          <span class="section-line"></span>
+        </div>
+        <p class="section-sub reveal">欢迎交流学习、竞赛、科研合作</p>
+        <div class="contact-grid">
+          <a class="contact-card reveal" href="tel:13870669717">
+            <span class="contact-icon">📱</span>
+            <h3>电话</h3>
+            <p>138 7066 9717</p>
+          </a>
+          <a class="contact-card reveal" href="mailto:13870669717@163.com">
+            <span class="contact-icon">✉️</span>
+            <h3>邮箱</h3>
+            <p>13870669717@163.com</p>
+          </a>
+          <div class="contact-card reveal">
+            <span class="contact-icon">🏙️</span>
+            <h3>坐标</h3>
+            <p>河北 · 唐山 · 曹妃甸区</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2024 – 2026 熊奕辉 · 用代码与热爱记录成长</p>
+      <p class="footer-sub">华北理工大学 · 采矿工程（双碳方向）</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
